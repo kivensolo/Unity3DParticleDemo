@@ -17,8 +17,18 @@ import android.widget.TextView;
 
 import com.unity3d.player.UnityPlayer;
 
+/**
+ * 包含UnitPlayer的Activity
+ *
+ * Android调用Unity的方法：
+ *   // 第一个参数是unity中的交互脚本所挂在的物体的名字，第二个是方法名，第三个是参数
+ *   // 下面这行代码的意思是交互脚本挂在了LoadingManager上，交互方法叫message
+ *   UnityPlayer.UnitySendMessage("LoadingManager", "message", type);
+ *
+ */
 public class UnityPlayerActivity extends Activity {
-    protected UnityPlayer mUnityPlayer; // don't change the name of this variable; referenced from native code
+    //NOTICE: 不要改变这个变量的名称; native代码会使用
+    protected UnityPlayer mUnityPlayer;
 
     // Override this in your custom UnityPlayerActivity to tweak the command line arguments passed to the Unity Android Player
     // The command line arguments are passed as a string, separated by spaces
@@ -31,7 +41,6 @@ public class UnityPlayerActivity extends Activity {
         return cmdLine;
     }
 
-    // Setup activity layout
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -49,7 +58,7 @@ public class UnityPlayerActivity extends Activity {
 
     private void addMarqueeText() {
         TextView view = new TextView(this);
-        view.setText("Unity Demo with UnityPlayer.");
+        view.setText(R.string.particle_desc);
         view.setTextSize(48);
         view.setEllipsize(TextUtils.TruncateAt.MARQUEE);
         view.setSingleLine(true);
@@ -166,5 +175,18 @@ public class UnityPlayerActivity extends Activity {
     /*API12*/
     public boolean onGenericMotionEvent(MotionEvent event) {
         return mUnityPlayer.injectEvent(event);
+    }
+
+    /**
+     * 暴露给unity的方法
+     */
+    public void method_XXX(){
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
     }
 }

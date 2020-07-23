@@ -17,11 +17,26 @@ public class LoginActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(createContentView());
+        hideNavigation();
+    }
+
+    /**
+     * 隐藏设备导航栏UI
+     */
+    private void hideNavigation() {
+        View decorView = getWindow().getDecorView();
+        int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+                | View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                | View.SYSTEM_UI_FLAG_IMMERSIVE
+                | View.SYSTEM_UI_FLAG_FULLSCREEN;
+        decorView.setSystemUiVisibility(uiOptions);
     }
 
     private View createContentView() {
         TextView view = new TextView(this);
-        view.setText("Click Open Unity Player Page");
+        view.setText(R.string.welcom_tips);
         view.setTextSize(48);
         view.setEllipsize(TextUtils.TruncateAt.MARQUEE);
         view.setSingleLine(true);
