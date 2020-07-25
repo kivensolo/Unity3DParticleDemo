@@ -2,6 +2,4 @@
 <resources>
   <string name="app_name">JM_tst</string>
   <string name="welcom_tips">Click Open Unity Player Page</string>
-  <string name="game_view_content_description">Game view</string>
-  <string name="particle_desc">Unity with Particle System</string>
 </resources>

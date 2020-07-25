@@ -68,13 +68,18 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation "jp.wasabeef:takt:1.0.5"
+//    implementation 'jp.wasabeef:takt:1.0.5'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+//    implementation 'com.xgimi.library:apm:0.0.14'
 
-    implementation 'com.xgimi.library:apm:0.0.14'
+    // 红包效果
+    implementation project(':u3d_red_package')
+
+    // 粒子系统效果
+//    implementation project(':u3d_particle_system')
 
 }
