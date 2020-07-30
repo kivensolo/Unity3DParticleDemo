@@ -10,6 +10,11 @@ import android.view.Window;
 
 import com.unity3d.player.UnityPlayer;
 
+/**
+ * UnityPlayerActivity
+ * UnityPlayer.quit()调用的时候会杀死当前进程，
+ * 所以建议为Unity的界面创建新的进程,
+ */
 public class UnityPlayerActivity extends Activity {
     protected UnityPlayer mUnityPlayer; // don't change the name of this variable; referenced from native code
 

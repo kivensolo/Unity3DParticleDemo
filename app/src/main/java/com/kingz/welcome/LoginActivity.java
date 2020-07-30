@@ -12,7 +12,9 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
-import cn.com.yomo.unity.ShowU3DActivity;
+import com.unity.particle.Fire3DActivity;
+import com.unity.particle.R;
+
 
 public class LoginActivity extends Activity {
     @Override
@@ -49,10 +51,10 @@ public class LoginActivity extends Activity {
         view.getPaint().setTypeface(Typeface.DEFAULT_BOLD);
         view.setBackgroundColor(Color.BLACK);
         view.setOnClickListener(v -> {
-//            Intent intent = new Intent(LoginActivity.this, JM_tst.UnityPlayerActivity.class);
-//            startActivity(intent);
+            Intent intent = new Intent(LoginActivity.this, Fire3DActivity.class);
+            startActivity(intent);
 
-           startActivity(new Intent(this, ShowU3DActivity.class));
+//           startActivity(new Intent(this, ShowU3DActivity.class));
         });
         FrameLayout.LayoutParams lps = new FrameLayout.LayoutParams(900, ViewGroup.LayoutParams.MATCH_PARENT);
         view.setGravity(Gravity.CENTER);

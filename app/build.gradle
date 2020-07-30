@@ -17,7 +17,7 @@ android {
     defaultConfig {
         minSdkVersion 22
         targetSdkVersion 26
-        applicationId 'com.DefaultCompany.JM_tst'
+        applicationId 'com.unity.particle'
         ndk {
             abiFilters 'armeabi-v7a', 'x86'
         }
@@ -77,9 +77,7 @@ dependencies {
 //    implementation 'com.xgimi.library:apm:0.0.14'
 
     // 红包效果
-    implementation project(':u3d_red_package')
-
-    // 粒子系统效果
-//    implementation project(':u3d_particle_system')
+//    implementation project(':u3d_red_package')
+    implementation project(':u3d_particle_system_xgimi')
 
 }

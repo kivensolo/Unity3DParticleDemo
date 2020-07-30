@@ -1,4 +1,4 @@
 rootProject.name='My Application'
 include ':app'
 include ':u3d_red_package'
-include ':u3d_particle_system'
+include ':u3d_particle_system_xgimi'

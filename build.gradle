@@ -6,7 +6,7 @@ buildscript {
         maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
         maven { url 'https://maven.aliyun.com/repository/google' }
         maven { url 'https://maven.aliyun.com/repository/jcenter' }
-        maven { url 'http://10.40.33.174:8081/nexus/content/repositories/XgimiApi' }
+//        maven { url 'http://10.40.33.174:8081/nexus/content/repositories/XgimiApi' }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.6.1'
@@ -22,7 +22,7 @@ allprojects {
         maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
         maven { url 'https://maven.aliyun.com/repository/google' }
         maven { url 'https://maven.aliyun.com/repository/jcenter' }
-        maven { url 'http://10.40.33.174:8081/nexus/content/repositories/XgimiApi' }
+//        maven { url 'http://10.40.33.174:8081/nexus/content/repositories/XgimiApi' }
     }
 }
 

@@ -1,13 +1,13 @@
 apply plugin: 'com.android.library'
 
 android {
-	compileSdkVersion 26
+	compileSdkVersion 22
 
 	ndkVersion '19.2.5345600'
 
 	defaultConfig {
-		minSdkVersion 15
-		targetSdkVersion 26
+		minSdkVersion 21
+		targetSdkVersion 22
 	}
 
 	lintOptions {
@@ -31,5 +31,5 @@ android {
 
 
 dependencies {
-	compile fileTree(dir: 'libs', include: ['*.jar'])
+	implementation fileTree(dir: 'libs', include: ['*.jar'])
 }
